@@ -37,10 +37,9 @@ function getCriticality(criticality) {
 
 ## Check for elements in the entity with @criticality annotation
 
-Take a look at [cds lifecycle events!](https://cap.cloud.sap/docs/node.js/cds-server#lifecycle-events) By using [served event](https://cap.cloud.sap/docs/node.js/cds-server#served) lets try to look for the elements
-
-- of an entity with `enum` and `@criticality` annotation and
-- elements which are defined as an association to this entity.
+Take a look at [cds lifecycle events!](https://cap.cloud.sap/docs/node.js/cds-server#lifecycle-events) By using [served event](https://cap.cloud.sap/docs/node.js/cds-server#served) look for: 
+1. elements of an entity with `enum` and `@criticality` annotation and
+2. elements which are defined as an association to this entity.
 
 ```js
 const cds = require("@sap/cds/lib");
