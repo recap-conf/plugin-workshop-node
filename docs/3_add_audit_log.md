@@ -1,33 +1,5 @@
 # Implement Audit Logging
 
-
-## Extend the Customer Entity 
-
-For audit logging, we will be extending the customer entity with some potentially sensitive properties.
- - Add a file `extensions.cds` in `/db` folder with the following content;
-   ```js
-    using from './schema';
-    using {
-      cuid,
-      managed
-    } from '@sap/cds/common';
-
-    entity sap.capire.incidents.Addresses : cuid, managed {
-      customer      : Association to sap.capire.incidents.Customers;
-      city          : String;
-      postCode      : String;
-      streetAddress : String;
-    }
-
-    extend sap.capire.incidents.Customers with {
-      creditCardNo : String(16) @assert.format: '^[1-9]\d{15}$';
-      addresses    : Composition of many sap.capire.incidents.Addresses
-                   on addresses.customer = $self;
-    };
-
-   ```
-   - Here we are extending the **Customer** entity and adding `Addresses` and `creditCardNo` properties. These two are only used for audit logging purposes.
-
 ## Add Admin Service to Expose Customers Entity
 
 Add a file `admin-service.cds` in `/srv` folder and update it with the following code:
