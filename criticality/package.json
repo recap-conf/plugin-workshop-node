@@ -1,0 +1,23 @@
+{
+  "name": "@cap-js/criticality",
+  "version": "1.0.0",
+  "description": "Plugin for adding criticality indicators in the Fiori UI",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.tools.sap/I077638/cap-pluign-for-criticality.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "cds": {
+    "requires": {
+      "criticality": {
+        "fioriAnnotations": true
+      }
+    }
+  }
+}
