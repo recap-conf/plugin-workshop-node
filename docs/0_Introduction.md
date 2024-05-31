@@ -10,10 +10,10 @@ The idea is to create a plugin once and use it many times, hence to reduce the t
 
 We use the [incidents application](https://github.com/cap-js/incidents-app) as a base app. Using the base app, we test the plugin we are going to develop in this workshop.
 
-- Start by cloning the repository:
+- Start by opening a new terminal and go into the *incidents-app* folder of the repository:
 
     ```sh
-    git clone https://github.com/cap-js/incidents-app.git && cd incidents-app && git checkout criticality-plugin-workshop
+    cd incidents-app
     ```
 
 - Install the dependencies:
