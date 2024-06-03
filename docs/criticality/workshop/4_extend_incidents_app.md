@@ -10,7 +10,7 @@ In the _package.json_ of the incidents application (not the plugin!) we add a de
 {
   ...,
   "workspaces": [
-    "criticality"
+    "../criticality"
   ],
   "dependencies": {
     ...
