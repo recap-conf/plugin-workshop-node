@@ -43,7 +43,7 @@ Take a look at [cds lifecycle events!](https://cap.cloud.sap/docs/node.js/cds-se
 - elements which are defined as an association to this entity.
 
 ```js
-const cds = require("@sap/cds/lib");
+const cds = require("@sap/cds");
 cds.once("served", () => {
   // go through all services
   for (let srv of cds.services) {
