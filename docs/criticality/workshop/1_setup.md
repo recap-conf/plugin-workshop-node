@@ -12,6 +12,10 @@ mkdir criticality && cd criticality && npm init -y && cd ..
 
 The command `npm init -y` creates a _package.json_ file in the new folder.
 
+> [!NOTE]
+> Normally, you would create a plugin _outside_ of the application's folder.  In this tutorial, you do it inline though.  This is simpler and avoids a monorepo setup.
+
+
 # Next Step
 
 [Plugin development: Concepts](./2_concepts.md)
