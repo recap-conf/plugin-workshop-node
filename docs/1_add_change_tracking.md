@@ -15,9 +15,9 @@ npm add @cap-js/change-tracking
 
 ## Annotate the Models
 
-Once you've included the *plugin*, proceed to insert the `@changelog` annotations into the entities that you want to track changes for in the `processor-service.cds` file.
+Once you've included the *plugin*, proceed to insert the `@changelog` annotations into the entities that you want to track changes for in the `srv/services.cds` file.
 
-Add the below annotations into `processor-service.cds` file.
+Add the below annotations into `srv/services.cds` file.
 
 ```cds
 annotate ProcessorService.Incidents with @changelog: {
