@@ -61,6 +61,10 @@ Let's get started!
 
 Both the old and updated values of the message field are shown, along with the type of the change, user ID and the timestamp of the modification.
 
+> [!NOTE]
+> Should the the _Change History_ table be empty for you, click in the _Search_ field above it and press <kbd>Enter</kbd>.
+> This is a UI bug that will be resolved soon.
+
 5. In **Change History**, you have the option to modify the incident's title, status, or customer, and view the changes.
 
 ![Change the Incident](images/change-incident-details.png)
