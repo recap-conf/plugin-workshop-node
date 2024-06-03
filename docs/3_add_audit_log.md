@@ -2,7 +2,7 @@
 
 ## Annotate Personal Data
 
-In order to automate audit logging, personal data management, and data retention management as much as possible, the first and frequently only task to do as an application developer is to identify entities and elements (potentially) holding personal data using **@PersonalData** annotations.
+In order to automate audit logging, personal data management, and data retention management as much as possible, the first and frequently only task to do as an application developer is to identify entities and elements (potentially) holding personal data using [`@PersonalData` annotations](https://cap.cloud.sap/docs/guides/data-privacy/annotations).
 <br/>
 Annotate the domain model in a separate file `srv/data-privacy.cds` and fill it with the following content:
 
