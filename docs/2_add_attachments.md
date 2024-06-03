@@ -11,17 +11,17 @@
 
 2. Add the below-highlighted code to the `package.json` of the project to scan the attachments.
 
-```json hl_lines="8-10"
+```jsonc hl_lines="4-6"
 {
   ...
   "cds": {
+    "attachments": {
+      "scan": true
+    },
     "requires": {
         ... 
     }
-  },
-  "attachments": {
-    "scan": true
-}
+  }
 }
 ```
 
