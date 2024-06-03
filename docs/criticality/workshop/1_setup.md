@@ -3,7 +3,8 @@
 # Develop the plugin
 
 Now let's create a plugin that we can use to extend the functionality of the incidents application (and any other application).
-Create a folder _criticality_ and run `npm init -y` in that folder:
+
+In the **root folder of the repository**, create a folder _criticality_ and run `npm init -y` in that folder:
 
 ```sh
 mkdir criticality && cd criticality && npm init -y && cd ..
