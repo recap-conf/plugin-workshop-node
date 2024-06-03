@@ -60,3 +60,5 @@ Below are the steps we have taken to establish asset management for our incident
 6. **Delete a file** by going into Edit mode and selecting the file(s) and by using the **Delete** button on the Attachments table. Then click the **Save** button to have that file deleted from the resource (database, S3 bucket, etc.). We demonstrate this by deleting the previously uploaded PDF file: `Solar Panel Report.pdf`
 
 ![delete file](./images/upload.gif)
+
+![Quick poll: reCAP your experience!](https://forms.office.com/Pages/ResponsePage.aspx?id=bGf3QlX0PEKC9twtmXka914n6hNKFVlPml6fyiE6QrxUMTZLVEU4Mk0wQlVCVTdTMTRNWkJGWTc5Ui4u)
