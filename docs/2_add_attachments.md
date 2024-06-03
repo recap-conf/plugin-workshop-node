@@ -9,7 +9,7 @@
    ```
 **Note** - To be able to use the Fiori uploadTable feature, you must ensure ^1.121.0 SAPUI5 version is updated in the application's index.html
 
-2. Add the below-highlighted code to the `package.json` of the project to scan the attachments.
+2. Add an `{ attachments: { scan: true } }` code block to the `package.json` of the project to scan the attachments.
 
 ```jsonc hl_lines="4-6"
 {
