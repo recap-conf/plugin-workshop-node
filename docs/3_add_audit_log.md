@@ -1,27 +1,13 @@
 # Implement Audit Logging
 
-## Add Admin Service to Expose Customers Entity
-
-Add a file `admin-service.cds` in `/srv` folder and update it with the following code:
-```js
-    using { sap.capire.incidents as my } from '../db/extensions';
-
-    @requires: 'admin'
-    service AdminService {
-
-      entity Customers as projection on my.Customers;
-
-    }
-```
-  
 ## Annotate Personal Data
 
 In order to automate audit logging, personal data management, and data retention management as much as possible, the first and frequently only task to do as an application developer is to identify entities and elements (potentially) holding personal data using **@PersonalData** annotations.
 <br/>
 Annotate the domain model in a separate file `srv/data-privacy.cds` and fill it with the following content:
 
-```js
-using {sap.capire.incidents as my} from './admin-service';
+```cds
+using { sap.capire.incidents as my } from './services';
 using {
   cuid,
   managed
@@ -32,12 +18,12 @@ annotate my.Customers with @PersonalData: {
   EntitySemantics: 'DataSubject',
   DataSubjectRole: 'Customer',
 } {
-  ID         @PersonalData.FieldSemantics : 'DataSubjectID';
+  ID            @PersonalData.FieldSemantics : 'DataSubjectID';
   firstName     @PersonalData.IsPotentiallyPersonal;
   lastName      @PersonalData.IsPotentiallyPersonal;
   email         @PersonalData.IsPotentiallyPersonal;
   phone         @PersonalData.IsPotentiallyPersonal;
-  creditCardNo @PersonalData.IsPotentiallySensitive;
+  creditCardNo  @PersonalData.IsPotentiallySensitive;
 }
 
 annotate my.Addresses with @PersonalData: {
@@ -67,7 +53,6 @@ The steps above is all you need to automatically log personal data-related event
 1. Create a file `request.http` with the following content:
    
     ```
-    
     @host = http://localhost:4004
 
     ### ProcessorService
@@ -113,16 +98,11 @@ The steps above is all you need to automatically log personal data-related event
     }
     
     ```
-    
-3. Add `admin` role to  `alice` in `package.json`.
-    ```json
-    "alice": {
-                  "roles": ["support", "admin"]
-                }   
-    ```
-    > User need `admin` role to access `admin` service and modify the customer's details.
-4. Start the server.
+
+1. Start the server:
     ```bash
       cds watch
     ```
-5. Send the requests and observe the response having logs from `[audit-log]` with `PersonalDataModified` and `SensitiveDataRead` events.
+
+1. Run the requests from `requests.http` one by one.<br>
+   Observe the response having logs from `[audit-log]` with `PersonalDataModified` and `SensitiveDataRead` events.
