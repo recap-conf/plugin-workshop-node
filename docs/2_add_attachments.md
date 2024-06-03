@@ -11,31 +11,31 @@
 
 2. Add an `{ attachments: { scan: true } }` code block to the `package.json` of the project to scan the attachments.
 
-```jsonc hl_lines="4-6"
-{
-  ...
-  "cds": {
-    "attachments": {
-      "scan": true
-    },
-    "requires": {
-        ... 
-    }
-  }
-}
-```
+   ```jsonc hl_lines="4-6"
+   {
+     ...
+     "cds": {
+       "attachments": {
+         "scan": true
+       },
+       "requires": {
+           ... 
+       }
+     }
+   }
+   ```
 
 
 ## Use attachments
-1. Create a new file attachments.cds in the db folder.
+1. Create a new file *attachments.cds* in the db folder.
 
 2. Copy the snippet to the newly created *attachments.cds* file
 
     ```cds
-        using { sap.capire.incidents as my } from './schema';
-        using { Attachments } from '@cap-js/attachments';
+    using { sap.capire.incidents as my } from './schema';
+    using { Attachments } from '@cap-js/attachments';
 
-        extend my.Incidents with { attachments: Composition of many Attachments }
+    extend my.Incidents with { attachments: Composition of many Attachments }
     ```
 
 ## Run and test the application locally
