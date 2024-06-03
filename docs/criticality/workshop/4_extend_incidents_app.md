@@ -10,7 +10,7 @@ In the _package.json_ of the incidents application (not the plugin!) we add a de
 {
   ...,
   "workspaces": [
-    "../criticality"
+    "criticality"
   ],
   "dependencies": {
     ...
@@ -48,29 +48,29 @@ Before we add the annotations, check that criticality information is unavailable
 To extend the CDS models with criticality annotations, create the file `db/criticality.cds` and add the annotations as follows:
 
 ```js
-    using { sap.capire.incidents as my } from './schema';
+using { sap.capire.incidents as my } from './schema';
 
-    annotate my.Status with {
-        code @criticality {
-            new @criticality.Neutral;
-            assigned @criticality.Critical;
-            in_process @criticality.Critical;
-            on_hold @criticality.Negative;
-            resolved @criticality.Positive;
-            closed  @criticality.Positive;
-        }; 
-    };
+annotate my.Status with {
+  code @criticality {
+    new @criticality.Neutral;
+    assigned @criticality.Critical;
+    in_process @criticality.Critical;
+    on_hold @criticality.Negative;
+    resolved @criticality.Positive;
+    closed  @criticality.Positive;
+  };
+};
 
-    extend my.Urgency {
-        criticality: Integer;
-    };
+extend my.Urgency {
+  criticality: Integer;
+};
 
-    annotate my.Urgency with {
-        code @criticality {
-            high @criticality.Negative;
-            medium @criticality.Critical;
-        }; 
-    };
+annotate my.Urgency with {
+  code @criticality {
+    high @criticality.Negative;
+    medium @criticality.Critical;
+  };
+};
 ```
 
 ### Run the incidents app and view the results
