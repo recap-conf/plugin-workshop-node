@@ -6,23 +6,24 @@
 
 ## Plugin Configurations
 
-You can provide default configurations in the plugins and the applications using the plugin can overwrite the plugin configurations. You can use this configuration to change the behaviour that the plugin adds to the application.
+You can provide [default configurations in the plugins](https://cap.cloud.sap/docs/node.js/cds-plugins#auto-configuration), and the applications using the plugin can overwrite the plugin configuration. You can use this configuration to change the behaviour that the plugin adds to the application.
 
-The plugin we are creating can add the UI annotations to render the criticality information. For now the scope is to add it in SAP Fiori UI's.
+The plugin we are creating can add the UI annotations to render the _criticality_ information. For now the scope is to add it in SAP Fiori UI's.
 
 In `criticality/package.json` add the configuration as follows:
 
 ```json
 "cds": {
-    "requires": {
-      "criticality": {
-        "fioriAnnotations": true
-      }
+  "requires": {
+    "criticality": {
+      "fioriAnnotations": true
     }
   }
+}
 ```
 
-You can access the configurations by checking `cds env` in the application.
+> [!TIP]
+> You can access the configurations by running `cds env get requires.criticality` in the application folder.
 
 ## Next Step
 
