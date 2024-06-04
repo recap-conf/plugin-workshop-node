@@ -37,14 +37,15 @@ function getCriticality(criticality) {
 
 ## Check for elements in the entity with @criticality annotation
 
-Take a look at [cds lifecycle events!](https://cap.cloud.sap/docs/node.js/cds-server#lifecycle-events) By using [served event](https://cap.cloud.sap/docs/node.js/cds-server#served) lets try to look for the elements
-
-- of an entity with `enum` and `@criticality` annotation and
-- elements which are defined as an association to this entity.
+Take a look at [cds lifecycle events!](https://cap.cloud.sap/docs/node.js/cds-server#lifecycle-events) By using [served event](https://cap.cloud.sap/docs/node.js/cds-server#served) look for: 
+1. elements of an entity with `enum` and `@criticality` annotation and
+2. elements which are defined as an association to this entity.
+3. debuggers can be set in the code to debug the code flow and troubleshooting in the plugin as well. Open a second terminal of type `Javascript Debug Terminal` and run the application with `cds watch` there. The application will stop at the debugger statements in the code below. Inspect, how the code works. After finishing the debugging, remove the debugger statements.
 
 ```js
 const cds = require("@sap/cds");
 cds.once("served", () => {
+debugger;
   // go through all services
   for (let srv of cds.services) {
     if (!(srv instanceof cds.ApplicationService)) continue;
@@ -58,6 +59,7 @@ cds.once("served", () => {
          * Check if the element is an enum with criticality annotation
          */
         if (element.enum && element["@criticality"]) {
+         debugger;
             
         }
 
@@ -66,6 +68,7 @@ cds.once("served", () => {
          * Check if the element is an association to the entity with enum and @criticality annotation
          */
         if (element.type === "cds.Association" && Object.values(element._target.elements).some((e) => e.enum && e["@criticality"])) {
+          debugger;
 
         }
       }
