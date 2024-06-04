@@ -1,13 +1,5 @@
 # Plugin development
 
-First, we will just show a simple log message. Create a new file `criticality/cds-plugin.js` and add the following:
-
-```sh
-console.log('my critical plugin')
-```
-
-This is where the magic happens: If we set a dependency in the _package.json_ of the base app (incidents application) to our criticality plugin, CDS will go and look for `cds-plugin.js` and execute the content. We're going to do that in the [last exercise](./4_extend_incidents_app.md).
-
 >You can check the final version of [cds-plugin.js](./../cds-plugin.js) for the reference.
 
 ## Create a criticality object
