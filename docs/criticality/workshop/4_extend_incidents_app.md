@@ -2,45 +2,6 @@
 
 Let's extend the incidents app with necessary configurations and annotations that our plugin will define.
 
-## Wire the plugin to the base app
-
-In the _package.json_ of the incidents application (not the plugin!) we add a dependency to our criticality plugin and we also define criticality as an [npm workspace](https://docs.npmjs.com/cli/v7/using-npm/workspaces)
-
-```js
-{
-  ...,
-  "workspaces": [
-    "criticality"
-  ],
-  "dependencies": {
-    ...
-    "criticality": "*"
-  },
-  ...
-}
-```
-
-Now you can install the dependencies and run the cds server locally:
-
-```sh
-npm i && cds w 
-```
-
-You should see something like this in the console:
-
-```sh
-...
-my critical plugin
-[cds] - loaded model from 5 file(s):
-...
-```
-
-To see the output from the plugins in the logs, raise the log level on the plugin component with
-
-```sh
-DEBUG=plugins cds w
-```
-
 ### Add annotations in the data model
 
 Before we add the annotations, check that criticality information is unavailable in the urgency data. You can run the application with `cds watch` and check the endpoints for [status](http://localhost:4004/odata/v4/processor/Status) (criticality is null) and [urgency](http://localhost:4004/odata/v4/processor/Urgency).
