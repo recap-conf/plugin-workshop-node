@@ -111,4 +111,5 @@ The steps above is all you need to automatically log personal data-related event
 
 # Next Step
 
-[Part 2: Develop your own plugin](./criticality/workshop/1_setup.md)
+[Part 2: Develop your own plugin (Node)](./criticality/workshop/1_setup.md)
+[Part 2: Develop your own plugin (Java)](https://github.com/recap-conf/criticality-plugin-java)
