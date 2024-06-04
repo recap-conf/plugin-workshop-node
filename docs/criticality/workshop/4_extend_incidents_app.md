@@ -53,4 +53,4 @@ This might particularly make sense, if you are using non SAP Fiori UIs. Then you
     }
   }
 ```
-![How captastic was your experience?](https://forms.office.com/Pages/ResponsePage.aspx?id=bGf3QlX0PEKC9twtmXka914n6hNKFVlPml6fyiE6QrxUMUJKS1hLWUxENElFR0dCVUhFVzlEMTFPRC4u)
+[How captastic was your experience?](https://forms.office.com/Pages/ResponsePage.aspx?id=bGf3QlX0PEKC9twtmXka914n6hNKFVlPml6fyiE6QrxUMUJKS1hLWUxENElFR0dCVUhFVzlEMTFPRC4u)
