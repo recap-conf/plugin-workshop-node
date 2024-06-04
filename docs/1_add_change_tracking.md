@@ -75,4 +75,4 @@ Both the old and updated values of the message field are shown, along with the t
 
 Congratulations, you have successfully implemented and tested the change tracking feature in your application.
 
-![Quick poll: reCAP your experience!](https://forms.office.com/Pages/ResponsePage.aspx?id=bGf3QlX0PEKC9twtmXka914n6hNKFVlPml6fyiE6QrxUN1VSRTdVVDNPTE1LTlozTzU2ODFEUFRHNy4u)
+[Quick poll: reCAP your experience!](https://forms.office.com/Pages/ResponsePage.aspx?id=bGf3QlX0PEKC9twtmXka914n6hNKFVlPml6fyiE6QrxUN1VSRTdVVDNPTE1LTlozTzU2ODFEUFRHNy4u)
