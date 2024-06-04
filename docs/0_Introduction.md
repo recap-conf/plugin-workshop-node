@@ -31,3 +31,7 @@ We use the [incidents application](https://github.com/cap-js/incidents-app) as a
 This is how the [webapp](http://localhost:4004/incidents/webapp/index.html) looks right now:
 
 ![Screenshot of the Incidents app UI w/o the plugin](./images/Incidents-ui-before.png)
+
+# Next Step
+
+[Implement Change Tracking](./1_add_change_tracking.md)
