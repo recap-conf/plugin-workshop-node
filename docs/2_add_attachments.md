@@ -61,4 +61,4 @@ Below are the steps we have taken to establish asset management for our incident
 
 ![delete file](./images/upload.gif)
 
-![Quick poll: reCAP your experience!](https://forms.office.com/Pages/ResponsePage.aspx?id=bGf3QlX0PEKC9twtmXka914n6hNKFVlPml6fyiE6QrxUMTZLVEU4Mk0wQlVCVTdTMTRNWkJGWTc5Ui4u)
+[Quick poll: reCAP your experience!](https://forms.office.com/Pages/ResponsePage.aspx?id=bGf3QlX0PEKC9twtmXka914n6hNKFVlPml6fyiE6QrxUMTZLVEU4Mk0wQlVCVTdTMTRNWkJGWTc5Ui4u)
