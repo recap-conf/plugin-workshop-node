@@ -108,3 +108,7 @@ The steps above is all you need to automatically log personal data-related event
    Observe the response having logs from `[audit-log]` with `PersonalDataModified` and `SensitiveDataRead` events.
 
 [Quick poll: reCAP your experience!](https://forms.office.com/Pages/ResponsePage.aspx?id=bGf3QlX0PEKC9twtmXka914n6hNKFVlPml6fyiE6QrxUNUNBNjA3MVlQVTM3MEhPRFNBNjZGNThNVi4u)
+
+# Next Step
+
+[Part 2: Develop your own plugin](./criticality/workshop/1_setup.md)
