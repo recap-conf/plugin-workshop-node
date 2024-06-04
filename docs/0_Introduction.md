@@ -4,7 +4,7 @@ Welcome to the recap Workshop on CAP Plugins!
 ## Purpose
 
 CAP Plugins have gained a lot of traction in the last months and year(s).
-The idea is to create a plugin once and use it many times, hence to reduce the total
+The idea is to create a plugin once and use it many times, hence to reduce the total effort of development and operations, so CAP application developers can focus on their domain.
 
 ## Clone the incidents repository
 
