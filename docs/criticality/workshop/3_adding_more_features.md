@@ -132,7 +132,7 @@ In addition we add the read handlers to return the criticality data when the enu
             if (!data) return;
             let assocElem = element;
             let assocElemName = assocElem.name;
-            assocElem._target.elements.filter((e) => e.enum && e["@criticality"]).map((field) => {
+            Object.values(assocElem._target.elements).filter((e) => e.enum && e["@criticality"]).map((field) => {
               let fieldName = field.name;
               let enumElement = assocElem._target.elements[fieldName].enum;
               for (let entry of data) {
